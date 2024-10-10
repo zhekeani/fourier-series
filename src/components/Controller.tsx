@@ -79,7 +79,7 @@ const setupGUI = (setPathShape: (pathShape: PathShapeNames) => void) => {
 
   const activePathController = gui
     .add(config, "ACTIVE_PATH", {
-      "Eight notes": PathShapeNames.eightNotes,
+      "Eight note": PathShapeNames.eightNotes,
       "Treble clef": PathShapeNames.trebleClef,
       "Capital letter F": PathShapeNames.capitalLetterF,
       "Greek letter pi": PathShapeNames.greekLetterPi,
