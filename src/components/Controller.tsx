@@ -124,7 +124,7 @@ const setupGUI = (setPathShape: (pathShape: PathShapeNames) => void) => {
     .name("Duration (s)");
   controllers.push(durationController);
 
-  gui.add(config, "ROTATING_ARROWS").name("Rotating arrows");
+  gui.add(config, "ROTATING_ARROWS").name("Rotating vectors");
 
   gui.add(config, "PAUSED").name("Paused");
 
