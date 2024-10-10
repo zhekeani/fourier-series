@@ -158,11 +158,11 @@ const loadPathsFromJson = async (): Promise<PathsData | null> => {
     greekLetterPiData,
     greekLetterOmegaData,
   ] = await Promise.all([
-    loadPathJsonFile("/src/assets/shapes/eight-notes.json"),
-    loadPathJsonFile("/src/assets/shapes/treble-clef.json"),
-    loadPathJsonFile("/src/assets/shapes/capital-letter-f.json"),
-    loadPathJsonFile("/src/assets/shapes/greek-letter-pi.json"),
-    loadPathJsonFile("/src/assets/shapes/greek-letter-Omega.json"),
+    loadPathJsonFile("/fourier-series/shapes/eight-notes.json"),
+    loadPathJsonFile("/fourier-series/shapes/treble-clef.json"),
+    loadPathJsonFile("/fourier-series/shapes/capital-letter-f.json"),
+    loadPathJsonFile("/fourier-series/shapes/greek-letter-pi.json"),
+    loadPathJsonFile("/fourier-series/shapes/greek-letter-Omega.json"),
   ]);
 
   if (
