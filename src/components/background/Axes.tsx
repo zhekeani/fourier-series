@@ -63,14 +63,16 @@ const Axes = ({ ctrWidth, ctrHeight }: Props) => {
 
       ticks
         .filter(
-          (_, i) => i < xTicksCount / 2 && i !== Math.round(xTicksCount / 2)
+          (_, i) =>
+            i < xTicksCount / 2 - 1 && i !== Math.floor(xTicksCount / 2) - 1
         )
         .attr("dx", "4px")
         .style("text-anchor", "start");
 
       ticks
         .filter(
-          (_, i) => i > xTicksCount / 2 && i !== Math.round(xTicksCount / 2)
+          (_, i) =>
+            i > xTicksCount / 2 - 1 && i !== Math.floor(xTicksCount / 2) - 1
         )
         .attr("dx", "-4px")
         .style("text-anchor", "end");
@@ -90,16 +92,18 @@ const Axes = ({ ctrWidth, ctrHeight }: Props) => {
 
       ticks
         .filter(
-          (_, i) => i < yTicksCount / 2 && i !== Math.round(yTicksCount / 2)
+          (_, i) =>
+            i > yTicksCount / 2 - 1 && i !== Math.floor(yTicksCount / 2) - 1
         )
-        .attr("dy", "-6px")
+        .attr("dy", "10px")
         .style("text-anchor", "end");
 
       ticks
         .filter(
-          (_, i) => i > yTicksCount / 2 && i !== Math.round(yTicksCount / 2)
+          (_, i) =>
+            i < yTicksCount / 2 - 1 && i !== Math.floor(yTicksCount / 2) - 1
         )
-        .attr("dy", "10px")
+        .attr("dy", "-6px")
         .style("text-anchor", "end");
     }
   }, [ctrHeight, ctrWidth]);
