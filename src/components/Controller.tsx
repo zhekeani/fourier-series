@@ -148,6 +148,38 @@ const setupGUI = (setPathShape: (pathShape: PathShapeNames) => void) => {
   };
 
   gui.add(reset, "function").name("Reset").updateDisplay();
+
+  addLinkButton(
+    gui,
+    "https://github.com/zhekeani/fourier-series",
+    "Github",
+    "github"
+  );
+};
+
+const addLinkButton = (
+  gui: GUI,
+  url: string,
+  buttonName: string,
+  iconClass: string
+): void => {
+  const linkButton = gui
+    .add(
+      {
+        fun: () => {
+          window.open(url);
+        },
+      },
+      "fun"
+    )
+    .name(buttonName);
+
+  linkButton.domElement.className = "link-button";
+
+  // Create and append the icon element
+  const iconEl = document.createElement("span");
+  iconEl.className = `icon ${iconClass}`;
+  linkButton.domElement.appendChild(iconEl);
 };
 
 const loadPathsFromJson = async (): Promise<PathsData | null> => {

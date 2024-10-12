@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "iconfont";
+  src: url("./assets/iconfont.ttf") format("truetype");
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -36,4 +41,32 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.link-button {
+  padding-inline: 4px;
+  padding-bottom: 6px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-button .widget {
+  width: 100%;
+}
+
+.link-button .widget button {
+  width: 100%;
+  font-size: 120%;
+}
+
+.icon {
+  font-family: "iconfont";
+  font-size: 170%;
+  float: right;
+}
+
+.github:before {
+  content: "b";
 }
