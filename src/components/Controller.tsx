@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import {
   config,
   initialDuration,
-  initialFreqCount,
   initialICount,
   initialPathShape,
+  initialUsedFreqCount,
 } from "../simulation/config";
 import { clearAllTargets } from "../simulation/fbo";
 import {
@@ -134,7 +134,7 @@ const setupGUI = (setPathShape: (pathShape: PathShapeNames) => void) => {
       setPathShape(initialPathShape);
 
       config.ITERATION_COUNT = initialICount;
-      config.FREQUENCY_COUNT = initialFreqCount;
+      config.USED_FREQUENCY_COUNT = initialUsedFreqCount;
       config.DURATION = initialDuration;
 
       controllers.forEach((controller) => controller.updateDisplay());
