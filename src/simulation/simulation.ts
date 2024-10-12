@@ -244,7 +244,7 @@ const drawRotationCircle = (
   const { rotatingArrows } = frameBufferState;
 
   if (rotatingArrows) {
-    const maxArrowCount = Math.min(config.USED_FREQUENCY_COUNT + 1, 30);
+    const maxArrowCount = Math.min(config.USED_FREQUENCY_COUNT, 30);
 
     rotationCircleProgram.bind();
 
